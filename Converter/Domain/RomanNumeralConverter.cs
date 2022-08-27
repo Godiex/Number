@@ -5,7 +5,7 @@ namespace Converter.Domain;
 public class RomanNumeralConverter : NumberConverter
 {
     private const int MinimunValue = 1;
-    private int AmountCharacteres { get; set; }
+    private int AmountCharacteres3 { get; set; }
     private int ValueConverted { get; set; }
     private int CurrentValue { get; set; }
     private int NextValue { get; set; }
@@ -25,18 +25,18 @@ public class RomanNumeralConverter : NumberConverter
     {
         value = value.ToUpper();
         ValidateValue(value);
-        AmountCharacteres = value.Length;
+        AmountCharacteres3 = value.Length;
         GenerateConversion(value);
         return ValueConverted.ToString();
     }
 
     private void GenerateConversion(string value)
     {
-        for (var i = 0; i < AmountCharacteres; i++)
+        for (var i = 0; i < AmountCharacteres3; i++)
         {
             var nextIndex = i + 1;
             CurrentValue = GetValueConverted(value[i]);
-            NextValue = nextIndex < AmountCharacteres ? GetValueConverted(value[nextIndex]) : MinimunValue;
+            NextValue = nextIndex < AmountCharacteres3 ? GetValueConverted(value[nextIndex]) : MinimunValue;
 
             if (CurrentValue >= NextValue)
             {
