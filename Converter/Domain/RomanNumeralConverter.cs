@@ -4,7 +4,7 @@ namespace Converter.Domain;
 
 public class RomanNumeralConverter : NumberConverter
 {
-    private const int MinimunValue = 1;
+    private const int MinimunValues = 1;
     private int AmountCharacteres { get; set; }
     private int ValueConverted { get; set; }
     private int CurrentValue { get; set; }
@@ -36,7 +36,7 @@ public class RomanNumeralConverter : NumberConverter
         {
             var nextIndex = i + 1;
             CurrentValue = GetValueConverted(value[i]);
-            NextValue = nextIndex < AmountCharacteres ? GetValueConverted(value[nextIndex]) : MinimunValue;
+            NextValue = nextIndex < AmountCharacteres ? GetValueConverted(value[nextIndex]) : MinimunValues;
 
             if (CurrentValue >= NextValue)
             {
