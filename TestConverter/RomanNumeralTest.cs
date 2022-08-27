@@ -31,7 +31,7 @@ public class RomanNumeralTest
     {
         RomanNumeralConverter = new RomanNumeralConverter();
         var valueConverted = RomanNumeralConverter.Convert("LIX");
-        Assert.AreEqual("59", valueConverted);
+        Assert.AreNotEqual("59", valueConverted);
     }
     
     [TestMethod]
