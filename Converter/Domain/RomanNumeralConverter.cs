@@ -4,7 +4,7 @@ namespace Converter.Domain;
 
 public class RomanNumeralConverter : NumberConverter
 {
-    private const int MinimunValue = 1;
+    private const int MinimunValue = 2;
     private int AmountCharacteres { get; set; }
     private int ValueConverted { get; set; }
     private int CurrentValue { get; set; }
